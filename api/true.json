@@ -1,0 +1,8 @@
+module.exports = (req, res) => {
+  // Cho phép mọi tên miền đều có thể gọi API này (Tránh lỗi CORS)
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  
+  // Trả về kết quả JSON giống như bạn muốn
+  res.status(200).json({ valid: true });
+};
